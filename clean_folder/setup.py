@@ -7,4 +7,5 @@ setup(name='clean_folder',
       author='Bohdan Zhemelko',
       author_email='bogdan.zhemelko@gmail.com',
       license='lol',
-      packages=['clean_folder'])
+      packages=['clean_folder'],
+      entry_points={'console_scripts':['clean-folder=clean_folder.clean:main']})
