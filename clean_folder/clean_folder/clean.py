@@ -125,7 +125,9 @@ def handle_folder(folder: Path) -> None:
         print(f'Sorry, we can not delete the folder: {folder}')
 
 
-def main(folder: Path) -> None:
+def main() -> None:
+    folder = Path(sys.argv[1])
+    folder.resolve()
     scan(folder)
     for file in JPEG_IMAGES:
         handle_media(file, folder / 'images' / 'JPEG')
@@ -179,8 +181,3 @@ def main(folder: Path) -> None:
 
     for folder in FOLDERS[::-1]:
         handle_folder(folder)
-
-
-if __name__ == '__main__':
-    folder_for_scan = Path(sys.argv[1])
-    main(folder_for_scan.resolve())
