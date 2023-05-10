@@ -6,6 +6,6 @@ setup(name='clean_folder',
       url='https://github.com/tru-ten/Module7',
       author='Bohdan Zhemelko',
       author_email='bogdan.zhemelko@gmail.com',
-      license='lol',
+      license='MIT',
       packages=['clean_folder'],
       entry_points={'console_scripts':['clean-folder=clean_folder.clean:main']})
